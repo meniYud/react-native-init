@@ -1,10 +1,26 @@
 import { StatusBar } from "expo-status-bar";
-import { StyleSheet, Text, View, TouchableOpacity, Pressable } from "react-native";
+import { StyleSheet, Text, View, TouchableOpacity, Alert } from "react-native";
 import { theme } from "./theme";
 
 export default function App() {
   const onDelete = () => {
-    console.log("op")
+    console.log("Delete pressed")
+    Alert.alert(
+      "For real ?",
+      "Press OK, and It's gone!",
+      [
+        {
+          text: "OK",
+          onPress: () => console.log("Annnnd it's gone !"),
+          style: "destructive"
+        },
+        {
+          text: "Hell no!",
+          onPress: () => console.log("Pheeuuu... It was close!"),
+          style: "cancel"
+        }
+      ]
+    )
   }
   return (
     <View style={styles.container}>
