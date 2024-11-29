@@ -8,6 +8,9 @@ export default function App() {
       <ShoppingListItem name={"Coffee"} />
       <ShoppingListItem name={"Tea"} />
       <ShoppingListItem name={"Water"} />
+      <ShoppingListItem name={"Soda"} isCompleted={true} />
+      <ShoppingListItem name={"Coke"} />
+      <ShoppingListItem name={"Sprite"} isCompleted={true}/>
     </View>
   );
 }
